@@ -497,7 +497,6 @@ template {
   }
   .navbar__search {
     margin-left: auto;
-    max-width: 340px;
   }
   .navbar-list {
     padding-top: 22px;
@@ -506,6 +505,9 @@ template {
   .navbar-list__link {
     font-size: 12px;
     line-height: 15px;
+  }
+  .search__input {
+    width: 340px;
   }
 }
 
@@ -533,6 +535,8 @@ template {
             flex-direction: column;
     width: 16px;
     height: 11px;
+    padding: 0;
+    margin: 0;
     border: none;
     background-color: #fff;
     cursor: pointer;

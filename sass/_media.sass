@@ -12,14 +12,15 @@
       padding-bottom: 30px
     &__search
       margin-left: auto
-      max-width: 340px
-
     &-list
       padding-top: 22px
       padding-bottom: 22px
       &__link
         font-size: 12px
         line-height: 15px
+  .search
+    &__input
+      width: 340px
 @media ( max-width: 768px )
   .container
     max-width: 576px
@@ -35,6 +36,8 @@
       flex-direction: column
       width: 16px
       height: 11px
+      padding: 0
+      margin: 0
       border: none
       background-color: $light
       cursor: pointer
