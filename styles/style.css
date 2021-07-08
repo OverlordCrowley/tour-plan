@@ -516,8 +516,8 @@ template {
   .container {
     max-width: 700px;
   }
-  .logo {
-    width: 132px;
+  .navbar-container {
+    max-width: 672px;
   }
   .navbar-top {
     padding-top: 30px;
@@ -525,9 +525,14 @@ template {
   }
   .navbar__search {
     margin-left: auto;
+    margin-right: 73px;
+  }
+  .navbar .logo {
+    width: 132px;
+    margin-bottom: 4px;
   }
   .navbar-list {
-    padding-top: 22px;
+    padding-top: 20px;
     padding-bottom: 22px;
   }
   .navbar-list__link {
@@ -542,10 +547,16 @@ template {
 @media (max-width: 767px) {
   .container {
     max-width: 576px;
-    width: 92%;
+    width: 87%;
   }
   .navbar__search, .navbar-list, .navbar__user {
     display: none;
+  }
+  .navbar-top {
+    padding-top: 24px;
+  }
+  .navbar-top .logo {
+    max-width: 96px;
   }
   .menu-button {
     display: -webkit-box;
@@ -578,7 +589,7 @@ template {
 
 @media (max-width: 576px) {
   .logo {
-    max-width: 99px;
+    width: 99px;
   }
 }
 /*# sourceMappingURL=style.css.map */
