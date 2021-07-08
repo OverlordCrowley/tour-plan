@@ -388,6 +388,21 @@ template {
 
 .navbar .logo {
   width: 177px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .icon {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .navbar__search {
@@ -444,13 +459,22 @@ template {
 
 .search-button {
   position: absolute;
-  cursor: pointer;
   top: 0;
   right: 0;
   height: 100%;
   width: 65px;
   border: none;
   background-color: #EC1F46;
+  cursor: pointer;
+  color: #fff;
+}
+
+.button {
+  border: none;
+  background-color: #EC1F46;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 4px;
 }
 
 .user {
@@ -476,6 +500,10 @@ template {
   font-size: 14px;
   line-height: 18px;
   color: #333333;
+}
+
+.mail {
+  position: absolute;
 }
 
 @media (max-width: 1200px) {
@@ -511,7 +539,7 @@ template {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container {
     max-width: 576px;
     width: 92%;
