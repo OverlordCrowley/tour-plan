@@ -22,10 +22,19 @@
       &__link
         font-size: 12px
         line-height: 15px
+  .hotel-info__rating
+    margin-top: 6px
 
   .search
     &__input
       width: 340px
+  .breadcrumb
+    &-list
+      margin-top: 2px
+  .hotel
+    &-info
+      &__offer
+        margin-bottom: 2px
 @media ( max-width: 767px )
   .container
     max-width: 576px
@@ -35,8 +44,10 @@
       display: none
     &-top
       padding-top: 24px
+      padding-bottom: 18px
       .logo
-        max-width: 96px
+        max-width: 97px
+        padding-bottom: 8px
   .menu
     &-button
       display: flex
@@ -45,8 +56,8 @@
       flex-direction: column
       width: 16px
       height: 11px
+      margin: 0 0 8px 0
       padding: 0
-      margin: 0
       border: none
       background-color: $light
       cursor: pointer
@@ -54,11 +65,18 @@
         width: 16px
         height: 1px
         background-color: $text-color
+
+  .breadcrumb
+    &-list
+      padding: 19px 0 10px 0
   .stars
     flex-basis: 50%
     text-align: right
+    margin-right: 15px
+    margin-bottom: 2px
 
   .hotel
+    padding-top: 8px
     &-name
       flex-basis: 100%
     &-wrapper
