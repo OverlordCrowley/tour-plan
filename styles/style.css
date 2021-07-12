@@ -652,7 +652,7 @@ template {
 }
 
 .slider {
-  width: 728px;
+  max-width: 728px;
 }
 
 .slider-button {
