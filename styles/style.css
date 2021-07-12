@@ -644,6 +644,13 @@ template {
   z-index: 10;
 }
 
+.swiper__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .slider {
   width: 728px;
 }
