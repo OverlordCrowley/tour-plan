@@ -644,7 +644,7 @@ template {
   z-index: 10;
 }
 
-.swiper__image {
+.swiper-image {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
