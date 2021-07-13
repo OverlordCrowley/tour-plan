@@ -15,28 +15,11 @@
 		<script src="./js/swiper-bundle.min.js" defer></script>
 		<script src="./js/main.js" defer></script>
 		<script
-			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9b601e88-cb69-42b4-9221-08e3f5d37380
-"
+			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&ampapikey=9b601e88-cb69-42b4-9221-08e3f5d37380"
 			type="text/javascript"
+			scroll="false"
 		></script>
-		<script type="text/javascript">
-			// Функция ymaps.ready() будет вызвана, когда
-			// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-			ymaps.ready(init);
-			function init() {
-				// Создание карты.
-				var myMap = new ymaps.Map("map", {
-					// Координаты центра карты.
-					// Порядок по умолчанию: «широта, долгота».
-					// Чтобы не определять координаты центра карты вручную,
-					// воспользуйтесь инструментом Определение координат.
-					center: [7.890759, 98.294701],
-					// Уровень масштабирования. Допустимые значения:
-					// от 0 (весь мир) до 19.
-					zoom: 18,
-				});
-			}
-		</script>
+
 		<title>Best Tour Plan - Hotel Booking</title>
 	</head>
 	<body>
@@ -292,5 +275,32 @@
 			<!-- /.hotel-grid -->
 			<!-- /.container -->
 		</section>
+		<script type="text/javascript">
+			// Функция ymaps.ready() будет вызвана, когда
+			// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+			ymaps.ready(init);
+			var myMap, myPlacemark;
+			function init() {
+				// Создание карты.
+				var myMap = new ymaps.Map("map", {
+					// Координаты центра карты.
+					// Порядок по умолчанию: «широта, долгота».
+					// Чтобы не определять координаты центра карты вручную,
+					// воспользуйтесь инструментом Определение координат.
+					center: [7.890759, 98.294701],
+					// Уровень масштабирования. Допустимые значения:
+					// от 0 (весь мир) до 19.
+					zoom: 18,
+				});
+				// Создание геообъекта с типом точка (метка).
+				var myPlacemark = new ymaps.Placemark([7.890759, 98.294701], {
+					hintContent: "DoubleTree by Hilton Phuket Banthai Resort",
+					balloonContent: "Hostel",
+				});
+
+				myMap.behaviors.disable(["scrollZoom"]);
+				myMap.geoObjects.add(myPlacemark);
+			}
+		</script>
 	</body>
 </html>
