@@ -1,3 +1,5 @@
+
+
 const hotelSwiper = new Swiper('.hotel-slider', {
   // Optional parameters
   loop: true,
@@ -16,3 +18,4 @@ const hotelSwiper = new Swiper('.hotel-slider', {
   },
 
 });
+
