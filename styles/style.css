@@ -971,7 +971,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 730px;
+  max-width: 730px;
   margin: 45px auto 0;
   background-color: #fff;
   border-radius: 8px;
@@ -1186,6 +1186,9 @@ template {
     padding-top: 72px;
     padding-bottom: 73px;
   }
+  .reviews-slider__item {
+    max-width: 579px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1345,8 +1348,34 @@ template {
   .newsletter__subscribe {
     max-width: 100%;
   }
+  .subscribe {
+    max-width: 100%;
+    width: 100%;
+    min-width: 100%;
+  }
   .subscribe__input {
     padding-left: 20px;
+  }
+  .reviews-slider__item {
+    padding: 0 30px 30px;
+  }
+  .reviews-slider__item::after, .reviews-slider__item::before {
+    display: none;
+  }
+  .reviews-slider__button {
+    top: 32px;
+  }
+  .reviews-slider__button--prev {
+    margin-left: -65px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .reviews-slider__button--next {
+    margin-right: -65px;
+    right: 50%;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
   }
 }
 
