@@ -72,9 +72,25 @@
     padding-top: 72px
     padding-bottom: 73px
   .reviews
+    padding-top: 15px
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 30px
+      line-height: 38px
+      margin-bottom: 50px
     &-slider
+      &__button
+        top: 50%
+        &--prev
+          background-image: url(../img/arrow-prev-sec.svg)
+          left: 0
+        &--next
+          background-image: url(../img/arrow-next-sec.svg)
+          right: 0
       &__item
         max-width: 579px
+
 @media ( max-width: 767px )
   .container,
     max-width: 576px
@@ -185,13 +201,22 @@
         text-transform: uppercase
     &__subscribe
       max-width: 100%
+  .newsletter__subscribe
+    max-width: 100%
   .subscribe
     max-width: 100%
-    width: 100%
-    min-width: 100%
   .subscribe__input
     padding-left: 20px
   .reviews
+    padding-top: 40px
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      max-width: 245px
+      margin: auto
+      margin-bottom: 42px
     &-slider
       &__item
         padding: 0 30px 30px
@@ -200,14 +225,15 @@
       &__button
         top: 32px
         &--prev
-          margin-left: -65px
+          margin-left: -92px
           left: 50%
           transform: translate(-50%, 0)
         &--next
-          margin-right: -65px
+          margin-right: -88px
           right: 50%
           transform: translate(50%, 0)
-
+  .newsletter__subscribe
+    max-width: 100%
 @media ( max-width: 576px )
   .logo
     width: 99px

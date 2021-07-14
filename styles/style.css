@@ -948,7 +948,7 @@ template {
 }
 
 .reviews {
-  padding: 40px 0 70px 0;
+  padding: 11px 0 70px 0;
 }
 
 .reviews__title {
@@ -1001,9 +1001,13 @@ template {
   height: 47px;
 }
 
+.reviews-slider__rating > img {
+  margin-left: 4px;
+}
+
 .reviews-slider__button {
   position: absolute;
-  top: 50%;
+  top: 46%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 30px;
@@ -1019,12 +1023,12 @@ template {
 
 .reviews-slider__button--prev {
   background-image: url(../img/arrow-prev-sec.svg);
-  left: 0;
+  left: 18px;
 }
 
 .reviews-slider__button--next {
   background-image: url(../img/arrow-next-sec.svg);
-  right: 0;
+  right: 18px;
 }
 
 .reviews-slider__profile {
@@ -1039,7 +1043,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
   margin-top: -45px;
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .reviews-slider__avatar {
@@ -1048,7 +1052,7 @@ template {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 9px;
+  margin-bottom: -3px;
 }
 
 .reviews-slider__username {
@@ -1185,6 +1189,27 @@ template {
   .newsletter {
     padding-top: 72px;
     padding-bottom: 73px;
+  }
+  .reviews {
+    padding-top: 15px;
+  }
+  .reviews__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 50px;
+  }
+  .reviews-slider__button {
+    top: 50%;
+  }
+  .reviews-slider__button--prev {
+    background-image: url(../img/arrow-prev-sec.svg);
+    left: 0;
+  }
+  .reviews-slider__button--next {
+    background-image: url(../img/arrow-next-sec.svg);
+    right: 0;
   }
   .reviews-slider__item {
     max-width: 579px;
@@ -1348,13 +1373,26 @@ template {
   .newsletter__subscribe {
     max-width: 100%;
   }
+  .newsletter__subscribe {
+    max-width: 100%;
+  }
   .subscribe {
     max-width: 100%;
-    width: 100%;
-    min-width: 100%;
   }
   .subscribe__input {
     padding-left: 20px;
+  }
+  .reviews {
+    padding-top: 40px;
+  }
+  .reviews__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 245px;
+    margin: auto;
+    margin-bottom: 42px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
@@ -1366,16 +1404,19 @@ template {
     top: 32px;
   }
   .reviews-slider__button--prev {
-    margin-left: -65px;
+    margin-left: -92px;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
   .reviews-slider__button--next {
-    margin-right: -65px;
+    margin-right: -88px;
     right: 50%;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
+  }
+  .newsletter__subscribe {
+    max-width: 100%;
   }
 }
 
