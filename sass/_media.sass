@@ -81,7 +81,7 @@
       margin-bottom: 50px
     &-slider
       &__button
-        top: 50%
+        top: 35%
         &--prev
           background-image: url(../img/arrow-prev-sec.svg)
           left: 0
@@ -201,6 +201,8 @@
         text-transform: uppercase
     &__subscribe
       max-width: 100%
+  .reviews-slider__text
+    float: left
   .newsletter__subscribe
     max-width: 100%
   .subscribe
@@ -220,6 +222,7 @@
     &-slider
       &__item
         padding: 0 30px 30px
+
         &::after, &::before
           display: none
       &__button
@@ -234,6 +237,9 @@
           transform: translate(50%, 0)
   .newsletter__subscribe
     max-width: 100%
+  .reviews-slider__text
+    overflow: scroll
+    max-height: 438px
 @media ( max-width: 576px )
   .logo
     width: 99px
