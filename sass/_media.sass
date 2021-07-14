@@ -4,11 +4,15 @@
   .slider
     width: 590px
   .hotel
+    padding-bottom: 60px
     &-grid
       max-width: 100%
+  .map
+    margin-top: 21px
 
 @media ( max-width: 992px )
-  .container
+
+  .container, .newsletter-wrapper
     max-width: 700px
   .navbar
     &-container
@@ -42,27 +46,33 @@
         margin-bottom: 2px
     &-grid
       flex-direction: column
+      max-height: none
     &__slider
       margin-bottom: 30px
       width: 100%
-
     &-right
       flex-direction: row
-.slider
-  max-width: 100%
-  height: 450px
-  margin-bottom: 28px
-
-.booking
-  width: 340px
-  padding: 29px 22px 26px 23px
+      margin-top: 30px
+  .slider
+    max-width: 100%
+    height: 450px
+    margin-bottom: 28px
+  .booking
+    min-width: 340px
+    width: 340px
+    height: 210px
+    padding: 29px 23px 26px 23px
   .slider
     width: 100%
     margin-bottom: 0
   .map
     width: 340px
+    height: 210px
+  .newsletter
+    padding-top: 72px
+    padding-bottom: 73px
 @media ( max-width: 767px )
-  .container
+  .container,
     max-width: 576px
     width: 87%
   .navbar
@@ -101,9 +111,11 @@
     margin-right: 15px
     margin-bottom: 2px
 
+  .hotel__slider
+    height: auto
   .hotel
     padding-top: 8px
-
+    padding-bottom: 40px
     &-name
       flex-basis: 100%
     &-wrapper
@@ -112,7 +124,7 @@
       &__text
         width: 100%
       &__name
-        margin-top: 10px
+        margin-top: 8px
         margin-bottom: 0
       &__rating
         display: none
@@ -121,11 +133,14 @@
         margin-left: 0
     &-right
       flex-direction: column
+      margin-top: 0
   .swiper-container
     margin-bottom: 0
+  .hotel__slider
+    min-height: 179px
+    height: 179px
   .slider
     margin-bottom: 20px
-
   .booking
     width: 100%
     margin-bottom: 20px
@@ -134,12 +149,40 @@
   .hotel-slider__button
     width: 12px
     height: 12px
-  .hotel-slider__button--prev
-    background-image: url(../img/320-prev.svg)
-    left: 10px
-  .hotel-slider__button--next
-    background-image: url(../img/320-next.svg)
-    right: 10px
+    &--prev
+      background-image: url(../img/320-prev.svg)
+      left: 10px
+    &--next
+      background-image: url(../img/320-next.svg)
+      right: 10px
+  .newsletter
+    padding: 22px 0 83px 0
+    &-wrapper
+      max-width: 576px
+      width: 87%
+      flex-direction: column
+      align-items: flex-start
+    &-title
+      color: $light
+      font-family: "Mulish"
+      font-style: normal
+      font-weight: 300
+      font-size: 20px
+      line-height: 25px
+      &__strong
+        display: block
+        padding-top: 5px
+        margin-bottom: 21px
+        font-family: "Mulish"
+        font-style: normal
+        font-weight: 600
+        font-size: 30px
+        line-height: 38px
+        text-transform: uppercase
+    &__subscribe
+      max-width: 100%
+  .subscribe__input
+    padding-left: 20px
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -148,14 +191,12 @@
       padding-top: 17px
   .hotel
     &-info
-      padding-bottom: 36px
+      padding-bottom: 38px
     &__slider
-      max-height: 100%
   .slider
-    min-height: 179px
-  .hotel
-    &__slider
-      margin-bottom: 20px
   .booking
     max-width: 100%
     min-width: 100%
+  .newsletter
+    &-wrapper
+      min-width: 280px
