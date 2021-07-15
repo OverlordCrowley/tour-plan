@@ -462,6 +462,22 @@ template {
   color: #333333;
 }
 
+.search__input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.search__input::placeholder {
+  color: #BDBDBD;
+}
+
 .search-button {
   position: absolute;
   top: 0;
@@ -937,6 +953,22 @@ template {
   margin-right: 95%;
 }
 
+.subscribe__input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.subscribe__input::placeholder {
+  color: #BDBDBD;
+}
+
 .subscribe__button {
   position: absolute;
   right: 0;
@@ -1177,6 +1209,7 @@ template {
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+  width: 100%;
 }
 
 .card__button {
@@ -1191,6 +1224,14 @@ template {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.card__t:first-child {
+  max-width: 150px;
+}
+
+.card__title:nth-child(1) {
+  max-width: 150px;
 }
 
 @media (max-width: 1200px) {
