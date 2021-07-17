@@ -16,14 +16,24 @@
     overflow: auto
     max-height: 299px
   .grid
-    &__items
-      grid-template-columns: repeat(3, 1fr)
-    &__image
-      max-width: 250px
-      min-width: 250px
-      &-small
-        min-width: 100%
-
+    &-items
+      grid-template-columns: repeat(3, 300px)
+    &-item
+      &-left
+        &__image
+          width: 250px
+          &-small
+            width: 100%
+      &-right
+        padding-bottom: 30px
+        &-small
+          margin-left: 0
+          margin-right: 0
+          padding: 0 22px 14px 22px
+          width: 100%
+      &-bottom
+        &__button
+          &-small
 @media ( max-width: 992px )
   .container, .newsletter-wrapper
     max-width: 700px
@@ -144,129 +154,46 @@
       &-small
         display: none
   .grid
-    &__items
-      display: grid
-      grid-gap: 10px
+    &-items
+      grid-gap: 15px
       grid-template-columns: repeat(2, 1fr)
-      max-width: 100%
-      max-height: 100%
-    &__item
-      position: relative
-      padding: 38px 21px 30px 0
-      border-radius: 8px
-      color: $light
-      z-index: 1
-      background-color: $dark
-      &-full
-        grid-column-start: 1
-        grid-column-end: 3
-        padding-top: 10px
-        padding-bottom: 10px
-      &-small
-        padding: 0 21px 10px 32px
-    &__image
-      max-height: 100%
-      min-height: 100%
-      max-width: 366px
-      min-width: 366px
-      background-image: url(../img/packages-img-1.jpg)
-      object-fit: cover
-      left: 0
-      position: absolute
-      z-index: -1
-      top: 0
-      border-radius: 8px 0px 0px 8px
-      &-small
-        max-width: 100%
-        min-width: 100%
-        max-height: 180px
-        min-height: 180px
-        border-radius: 8px 8px 0px 0px
-    &__offer
-      font-style: normal
-      font-weight: 600
-      top: 26px
-      position: absolute
-      font-size: 12px
-      line-height: 15px
-      padding: 8px 22px 7px 11px
-      border-radius: 0px 4px 4px 0px
-      &-small
-        position: absolute
-        left: 0
-        padding: 5px 10px 5px 11px
-        font-style: normal
-        font-weight: 600
-        font-size: 12px
-        line-height: 10px
-    &__title
-      margin-top: 3px
-      margin-bottom: 0
-      font-style: normal
-      font-weight: bold
-      font-size: 18px
-      line-height: 23px
-      &-small
-        margin-top: 6px
-        margin-bottom: 13px
-    &__text
-      font-style: normal
-      font-weight: normal
-      font-size: 12px
-      line-height: 160.6%
-      letter-spacing: 0.01px
-      margin-bottom: 25px
-      &-small
-        display: none
-    &-room
-      margin-bottom: 17px
-      &-small
-        margin-bottom: 13px
+    &-item
       &__text
         font-style: normal
         font-weight: normal
-        font-size: 12px
-        line-height: 15px
-        display: flex
-        align-items: center
-        margin-bottom: 10px
-      &__icon
-        padding-left: 3px
-        padding-top: 2px
-        &-small
-          padding-left: 0
-      &__description
-        padding-left: 14px
-        flex-wrap: wrap
-    &-bottom
-      &__old-price
-        display: block
-        font-style: normal
-        font-weight: normal
         font-size: 14px
-        line-height: 18px
-        text-decoration-line: line-through
-        margin-left: 3px
-        margin-bottom: 5px
+        line-height: 160.6%
+        letter-spacing: 0.01px
+        margin-bottom: 25px
+      &__title
+        margin-top: 3px
+        margin-bottom: 0
+        font-size: 18px
+        line-height: 23px
         &-small
-          margin-left: 0
-      &__current-price
-        font-style: normal
-        font-weight: bold
-        font-size: 24px
-        line-height: 30px
-        margin-left: 3px
+          margin-top: 6px
+          margin-bottom: 13px
+      &-left
+        max-height: 460px
+        &__image
+          width: 350px
+          border-radius: 8px 0px 0px 8px
+          height: 100%
+          &-small
+            width: 100%
+            height: 250px
+            border-radius: 8px 8px 0px 0px
+        &__offer
+          &-small
+            padding: 10px 10px 10px 10px
+            font-size: 12px
+            line-height: 10px
+      &-right
         &-small
-          margin-left: 0
-      &__button
-        padding: 11px 27px 10px 27px
-        float: right
-        margin-top: -5px
-        font-family: "Nunito"
-        font-style: normal
-        font-weight: 600
-        font-size: 14px
-        line-height: 19px
+          padding: 0 21px 20px 32px
+    &-room
+      margin-bottom: 17px
+
 @media ( max-width: 767px )
   .container,
     max-width: 576px
@@ -442,165 +369,92 @@
       order: 2
     &:nth-child(3)
       order: 1
+
   .other-packages
     padding: 7px 0 40px 0
     &__main-title
-      font-style: normal
-      font-weight: bold
       font-size: 18px
       line-height: 45px
-      text-align: center
-      text-transform: uppercase
       margin-bottom: 14px
-    &-right
-      max-width: 100%
-      max-height: 100%
-      margin-top: 200px
-      &-small
-        margin-top: 190px
-        width: 100%
-        height: auto
-    &__rating
-      max-height: 18px
-      &>img
-        max-width: 13px
-        min-width: 13px
-        float: left
-        max-height: 28px
-      &-small
-        display: none
   .grid
-    &__items
-      display: grid
-      grid-template-columns: repeat(1, 1fr)
-      grid-template-rows: repeat(4, 450px)
+    &-items
+      grid-template-columns: 1fr
       max-width: 100%
       max-height: 100%
       grid-gap: 0
       grid-row-gap: 20px
-    &__item
+    &-item
       grid-column-start: 1
       position: relative
-      padding: 38px 21px 30px 0
       border-radius: 8px
       color: $light
       z-index: 1
       background-color: $dark
+      &-small
+        padding-bottom: 15px
+      &-left
+        max-height: 250px
+        &-small
+          max-height: 150px
+        &__image
+          height: 100%
+          width: 100%
+          border-radius: 8px 8px 0 0
+          &-small
+            width: 100%
+            height: 100%
+            border-radius: 8px 8px 0px 0px
       &-full
-        grid-column-start: 1
-        grid-column-end: 3
+        padding: 0
+        flex-direction: column
+      &__rating
+        max-height: 18px
+        display: flex
+        justify-content: flex-start
+        &>img
+          min-width: 13px
+          max-height: 28px
+        &-small
+          display: none
+      &-right
+        width: 100%
         max-height: 100%
-        padding: 20px 20px 33px 20px
-        overflow: auto
-        scroll: auto
-      &-small
-        padding: 0 21px 10px 32px
-    &__image
-      max-height: 45%
-      min-height: 45%
-      max-width: 100%
-      min-width: 100%
-      background-image: url(../img/packages-img-1.jpg)
-      object-fit: cover
-      left: 0
-      position: absolute
-      z-index: -1
-      top: 0
-      border-radius: 8px 8px 0 0
-      &-small
-        max-width: 100%
-        min-width: 100%
-        max-height: 35%
-        min-height: 35%
-        border-radius: 8px 8px 0px 0px
-    &__offer
-      font-style: normal
-      font-weight: 600
-      top: 26px
-      left: 0
-      position: absolute
-      font-size: 12px
-      line-height: 15px
-      padding: 8px 22px 7px 11px
-      border-radius: 0px 4px 4px 0px
-      &-small
-        position: absolute
-        left: 0
-        padding: 5px 10px 5px 11px
-        font-style: normal
-        font-weight: 600
-        font-size: 12px
-        line-height: 10px
-    &__title
-      margin-top: 3px
-      margin-bottom: 0
-      font-style: normal
-      font-weight: bold
-      font-size: 18px
-      line-height: 23px
-      &-small
-        margin-top: 6px
-        margin-bottom: 13px
-    &__text
-      font-style: normal
-      font-weight: normal
-      font-size: 12px
-      line-height: 160.6%
-      letter-spacing: 0.01px
-      margin-bottom: 25px
-      max-height: 140px
-      overflow: auto
-      scroll: auto
-      &-small
-        display: none
-    &-room
-      margin-bottom: 17px
-      &-small
-        margin-bottom: 13px
+        padding: 0 22px 15px 22px
+        margin-top: 15px
+        margin-right: 0
+        &-small
+          width: 100%
+          height: auto
+          padding: 0 21px 0 32px
+      &__title
+        margin-bottom: 0
+        margin-top: 8px
+        &-small
+          margin-bottom: 13px
       &__text
         font-style: normal
         font-weight: normal
         font-size: 12px
-        line-height: 15px
-        display: flex
-        align-items: center
-        margin-bottom: 10px
-      &__icon
-        padding-left: 3px
-        padding-top: 2px
-        &-small
-          padding-left: 0
-      &__description
-        padding-left: 14px
-        flex-wrap: wrap
-    &-bottom
-      &__old-price
-        display: inline-block
-        font-style: normal
-        font-weight: normal
-        font-size: 14px
-        line-height: 18px
-        text-decoration-line: line-through
-        margin-left: 3px
-        margin-bottom: 5px
-        &-small
-          margin-left: 0
-      &__current-price
-        font-style: normal
-        font-weight: bold
-        font-size: 18px
-        line-height: 20px
-        margin-left: 3px
-        &-small
-          margin-left: 0
-      &__button
-        margin-top: 15px
-        font-family: "Nunito"
-        font-style: normal
-        font-weight: 600
-        font-size: 14px
-        line-height: 19px
-        width: 100%
+        line-height: 160.6%
+        letter-spacing: 0.01px
+        margin-bottom: 25px
+        max-height: 60px
+        overflow: auto
+      &-bottom
+        &__old-price
+          display: inline-block
+          margin-bottom: 0
+          &-small
+            margin-left: 0
+        &__current-price
+          font-size: 18px
+          line-height: 20px
+        &__button
+          width: 100%
+          margin-top: 20px
+          position: static
+    &-room
+      margin-bottom: 17px
 @media ( max-width: 576px )
   .logo
     width: 99px

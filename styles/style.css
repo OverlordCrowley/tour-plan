@@ -885,7 +885,7 @@ template {
 }
 
 .other-packages {
-  padding: 12px 0 70px 0;
+  padding: 12px 0 68px 0;
 }
 
 .other-packages__main-title {
@@ -898,10 +898,43 @@ template {
   margin-bottom: 64px;
 }
 
-.other-packages-right {
-  max-width: 300px;
+.grid-items {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+  -ms-grid-columns: (350px)[3];
+      grid-template-columns: repeat(3, 350px);
+  width: 100%;
   height: 100%;
-  float: right;
+}
+
+.grid-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 8px;
+  color: #fff;
+  z-index: 1;
+  background-color: #0A223D;
+}
+
+.grid-item-small {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 16px;
+}
+
+.grid-item-right {
+  margin: 38px 21px 0px 0;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -909,75 +942,50 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.other-packages-right-small {
-  margin-top: 273px;
-  width: 100%;
-  height: auto;
-}
-
-.other-packages__rating-small {
-  display: none;
-}
-
-.grid__items {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 30px;
-  -ms-grid-columns: (350px)[3];
-      grid-template-columns: repeat(3, 350px);
-  max-width: 100%;
   max-height: 100%;
+  padding-bottom: 15px;
 }
 
-.grid__item {
-  position: relative;
-  padding: 38px 21px 30px 0;
-  border-radius: 8px;
-  color: #fff;
-  z-index: 1;
-  background-color: #0A223D;
+.grid-item-right-small {
+  margin-top: 23px;
+  margin-left: 31px;
 }
 
-.grid__item-full {
+.grid-item-full {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
 }
 
-.grid__item-small {
-  padding: 0 21px 25px 32px;
+.grid-item-left {
+  max-height: 500px;
+  position: relative;
 }
 
-.grid__image {
-  max-height: 100%;
-  min-height: 100%;
-  max-width: 366px;
-  min-width: 366px;
-  background-image: url(../img/packages-img-1.jpg);
-  background-position: 50% 0px;
+.grid-item-left__image {
+  height: 100%;
+  width: 366px;
   -o-object-fit: cover;
      object-fit: cover;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  top: 0;
   border-radius: 8px 0px 0px 8px;
 }
 
-.grid__image-small {
-  max-width: 100%;
-  min-width: 100%;
-  max-height: 250px;
-  min-height: 250px;
+.grid-item-left__image-small {
+  width: 100%;
+  height: 250px;
   border-radius: 8px 8px 0px 0px;
 }
 
-.grid__offer {
+.grid-item-left-small {
+  height: 250px;
+  width: 100%;
+  min-width: 100%;
+}
+
+.grid-item-left__offer {
   font-style: normal;
   font-weight: 600;
-  top: 26px;
+  margin-top: 26px;
   position: absolute;
   font-size: 12px;
   line-height: 15px;
@@ -985,8 +993,7 @@ template {
   border-radius: 0px 4px 4px 0px;
 }
 
-.grid__offer-small {
-  position: absolute;
+.grid-item-left__offer-small {
   left: 0;
   padding: 4px 9px;
   font-style: normal;
@@ -995,7 +1002,62 @@ template {
   line-height: 10px;
 }
 
-.grid__title {
+.grid-item-bottom {
+  position: relative;
+}
+
+.grid-item-bottom__old-price {
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  margin-left: 3px;
+  margin-bottom: 5px;
+}
+
+.grid-item-bottom__old-price-small {
+  margin-left: 0;
+}
+
+.grid-item-bottom__current-price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  margin-left: 3px;
+  vertical-align: bottom;
+}
+
+.grid-item-bottom__current-price-small {
+  margin-left: 0;
+}
+
+.grid-item-bottom__button {
+  padding: 11px 27px 10px 27px;
+  margin-bottom: 15px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  vertical-align: bottom;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+
+.grid-item-bottom__button-small {
+  margin-right: 2px;
+}
+
+.grid-item__rating-small {
+  display: none;
+}
+
+.grid-item__title {
   margin-top: 3px;
   margin-bottom: 13px;
   font-style: normal;
@@ -1004,21 +1066,23 @@ template {
   line-height: 23px;
 }
 
-.grid__title-small {
+.grid-item__title-small {
   margin-top: 6px;
   margin-bottom: 24px;
 }
 
-.grid__text {
+.grid-item__text {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 160.6%;
   letter-spacing: 0.01px;
   margin-bottom: 44px;
+  overflow: auto;
+  max-height: 154px;
 }
 
-.grid__text-small {
+.grid-item__text-small {
   display: none;
 }
 
@@ -1059,48 +1123,9 @@ template {
       flex-wrap: wrap;
 }
 
-.grid-bottom__old-price {
-  display: block;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
-  margin-left: 3px;
-  margin-bottom: 5px;
-}
-
-.grid-bottom__old-price-small {
-  margin-left: 0;
-}
-
-.grid-bottom__current-price {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  margin-left: 3px;
-}
-
-.grid-bottom__current-price-small {
-  margin-left: 0;
-}
-
-.grid-bottom__button {
-  padding: 11px 27px 10px 27px;
-  float: right;
-  margin-top: -5px;
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-}
-
 .newsletter {
   position: relative;
-  padding: 80px 0 66px 0;
+  padding: 79px 0 66px 0;
   background-image: url(../img/newsleter-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1471,16 +1496,24 @@ template {
     overflow: auto;
     max-height: 299px;
   }
-  .grid__items {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+  .grid-items {
+    -ms-grid-columns: (300px)[3];
+        grid-template-columns: repeat(3, 300px);
   }
-  .grid__image {
-    max-width: 250px;
-    min-width: 250px;
+  .grid-item-left__image {
+    width: 250px;
   }
-  .grid__image-small {
-    min-width: 100%;
+  .grid-item-left__image-small {
+    width: 100%;
+  }
+  .grid-item-right {
+    padding-bottom: 30px;
+  }
+  .grid-item-right-small {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 22px 14px 22px;
+    width: 100%;
   }
 }
 
@@ -1643,160 +1676,52 @@ template {
   .other-packages__rating-small {
     display: none;
   }
-  .grid__items {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 10px;
+  .grid-items {
+    grid-gap: 15px;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
-    max-height: 100%;
   }
-  .grid__item {
-    position: relative;
-    padding: 38px 21px 30px 0;
-    border-radius: 8px;
-    color: #fff;
-    z-index: 1;
-    background-color: #0A223D;
-  }
-  .grid__item-full {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 3;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .grid__item-small {
-    padding: 0 21px 10px 32px;
-  }
-  .grid__image {
-    max-height: 100%;
-    min-height: 100%;
-    max-width: 366px;
-    min-width: 366px;
-    background-image: url(../img/packages-img-1.jpg);
-    -o-object-fit: cover;
-       object-fit: cover;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    border-radius: 8px 0px 0px 8px;
-  }
-  .grid__image-small {
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 180px;
-    min-height: 180px;
-    border-radius: 8px 8px 0px 0px;
-  }
-  .grid__offer {
-    font-style: normal;
-    font-weight: 600;
-    top: 26px;
-    position: absolute;
-    font-size: 12px;
-    line-height: 15px;
-    padding: 8px 22px 7px 11px;
-    border-radius: 0px 4px 4px 0px;
-  }
-  .grid__offer-small {
-    position: absolute;
-    left: 0;
-    padding: 5px 10px 5px 11px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 10px;
-  }
-  .grid__title {
-    margin-top: 3px;
-    margin-bottom: 0;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
-  }
-  .grid__title-small {
-    margin-top: 6px;
-    margin-bottom: 13px;
-  }
-  .grid__text {
+  .grid-item__text {
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 160.6%;
     letter-spacing: 0.01px;
     margin-bottom: 25px;
   }
-  .grid__text-small {
-    display: none;
+  .grid-item__title {
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .grid-item__title-small {
+    margin-top: 6px;
+    margin-bottom: 13px;
+  }
+  .grid-item-left {
+    max-height: 460px;
+  }
+  .grid-item-left__image {
+    width: 350px;
+    border-radius: 8px 0px 0px 8px;
+    height: 100%;
+  }
+  .grid-item-left__image-small {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .grid-item-left__offer-small {
+    padding: 10px 10px 10px 10px;
+    font-size: 12px;
+    line-height: 10px;
+  }
+  .grid-item-right-small {
+    padding: 0 21px 20px 32px;
   }
   .grid-room {
     margin-bottom: 17px;
-  }
-  .grid-room-small {
-    margin-bottom: 13px;
-  }
-  .grid-room__text {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 10px;
-  }
-  .grid-room__icon {
-    padding-left: 3px;
-    padding-top: 2px;
-  }
-  .grid-room__icon-small {
-    padding-left: 0;
-  }
-  .grid-room__description {
-    padding-left: 14px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .grid-bottom__old-price {
-    display: block;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    -webkit-text-decoration-line: line-through;
-            text-decoration-line: line-through;
-    margin-left: 3px;
-    margin-bottom: 5px;
-  }
-  .grid-bottom__old-price-small {
-    margin-left: 0;
-  }
-  .grid-bottom__current-price {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
-    margin-left: 3px;
-  }
-  .grid-bottom__current-price-small {
-    margin-left: 0;
-  }
-  .grid-bottom__button {
-    padding: 11px 27px 10px 27px;
-    float: right;
-    margin-top: -5px;
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
   }
 }
 
@@ -2058,200 +1983,116 @@ template {
     padding: 7px 0 40px 0;
   }
   .other-packages__main-title {
-    font-style: normal;
-    font-weight: bold;
     font-size: 18px;
     line-height: 45px;
-    text-align: center;
-    text-transform: uppercase;
     margin-bottom: 14px;
   }
-  .other-packages-right {
-    max-width: 100%;
-    max-height: 100%;
-    margin-top: 200px;
-  }
-  .other-packages-right-small {
-    margin-top: 190px;
-    width: 100%;
-    height: auto;
-  }
-  .other-packages__rating {
-    max-height: 18px;
-  }
-  .other-packages__rating > img {
-    max-width: 13px;
-    min-width: 13px;
-    float: left;
-    max-height: 28px;
-  }
-  .other-packages__rating-small {
-    display: none;
-  }
-  .grid__items {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    -ms-grid-rows: (450px)[4];
-        grid-template-rows: repeat(4, 450px);
+  .grid-items {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     max-width: 100%;
     max-height: 100%;
     grid-gap: 0;
     grid-row-gap: 20px;
   }
-  .grid__item {
+  .grid-item {
     -ms-grid-column: 1;
         grid-column-start: 1;
     position: relative;
-    padding: 38px 21px 30px 0;
     border-radius: 8px;
     color: #fff;
     z-index: 1;
     background-color: #0A223D;
   }
-  .grid__item-full {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 3;
-    max-height: 100%;
-    padding: 20px 20px 33px 20px;
-    overflow: auto;
-    scroll: auto;
+  .grid-item-small {
+    padding-bottom: 15px;
   }
-  .grid__item-small {
-    padding: 0 21px 10px 32px;
+  .grid-item-left {
+    max-height: 250px;
   }
-  .grid__image {
-    max-height: 45%;
-    min-height: 45%;
-    max-width: 100%;
-    min-width: 100%;
-    background-image: url(../img/packages-img-1.jpg);
-    -o-object-fit: cover;
-       object-fit: cover;
-    left: 0;
-    position: absolute;
-    z-index: -1;
-    top: 0;
+  .grid-item-left-small {
+    max-height: 150px;
+  }
+  .grid-item-left__image {
+    height: 100%;
+    width: 100%;
     border-radius: 8px 8px 0 0;
   }
-  .grid__image-small {
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 35%;
-    min-height: 35%;
+  .grid-item-left__image-small {
+    width: 100%;
+    height: 100%;
     border-radius: 8px 8px 0px 0px;
   }
-  .grid__offer {
-    font-style: normal;
-    font-weight: 600;
-    top: 26px;
-    left: 0;
-    position: absolute;
-    font-size: 12px;
-    line-height: 15px;
-    padding: 8px 22px 7px 11px;
-    border-radius: 0px 4px 4px 0px;
+  .grid-item-full {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .grid__offer-small {
-    position: absolute;
-    left: 0;
-    padding: 5px 10px 5px 11px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 10px;
+  .grid-item__rating {
+    max-height: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  .grid__title {
-    margin-top: 3px;
+  .grid-item__rating > img {
+    min-width: 13px;
+    max-height: 28px;
+  }
+  .grid-item__rating-small {
+    display: none;
+  }
+  .grid-item-right {
+    width: 100%;
+    max-height: 100%;
+    padding: 0 22px 15px 22px;
+    margin-top: 15px;
+    margin-right: 0;
+  }
+  .grid-item-right-small {
+    width: 100%;
+    height: auto;
+    padding: 0 21px 0 32px;
+  }
+  .grid-item__title {
     margin-bottom: 0;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 23px;
+    margin-top: 8px;
   }
-  .grid__title-small {
-    margin-top: 6px;
+  .grid-item__title-small {
     margin-bottom: 13px;
   }
-  .grid__text {
+  .grid-item__text {
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 160.6%;
     letter-spacing: 0.01px;
     margin-bottom: 25px;
-    max-height: 140px;
+    max-height: 60px;
     overflow: auto;
-    scroll: auto;
   }
-  .grid__text-small {
-    display: none;
+  .grid-item-bottom__old-price {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  .grid-item-bottom__old-price-small {
+    margin-left: 0;
+  }
+  .grid-item-bottom__current-price {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .grid-item-bottom__button {
+    width: 100%;
+    margin-top: 20px;
+    position: static;
   }
   .grid-room {
     margin-bottom: 17px;
-  }
-  .grid-room-small {
-    margin-bottom: 13px;
-  }
-  .grid-room__text {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    line-height: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 10px;
-  }
-  .grid-room__icon {
-    padding-left: 3px;
-    padding-top: 2px;
-  }
-  .grid-room__icon-small {
-    padding-left: 0;
-  }
-  .grid-room__description {
-    padding-left: 14px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .grid-bottom__old-price {
-    display: inline-block;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    -webkit-text-decoration-line: line-through;
-            text-decoration-line: line-through;
-    margin-left: 3px;
-    margin-bottom: 5px;
-  }
-  .grid-bottom__old-price-small {
-    margin-left: 0;
-  }
-  .grid-bottom__current-price {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 20px;
-    margin-left: 3px;
-  }
-  .grid-bottom__current-price-small {
-    margin-left: 0;
-  }
-  .grid-bottom__button {
-    margin-top: 15px;
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
-    width: 100%;
   }
 }
 
