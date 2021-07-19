@@ -962,6 +962,7 @@ template {
   width: 366px;
   -o-object-fit: cover;
      object-fit: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 
