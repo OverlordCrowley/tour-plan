@@ -1,5 +1,7 @@
-.other-packages
-  padding: 12px 0 68px 0
+.hidden
+  display: none
+  .other-packages
+    padding: 12px 0 68px 0
   &__main-title
     font-style: normal
     font-weight: bold
@@ -22,17 +24,18 @@
     color: $light
     z-index: 1
     background-color: $dark
+    border-radius: 8px 8px 8px 8px
     &-small
       justify-content: start
       flex-direction: column
       padding-bottom: 16px
     &-right
-      margin: 38px 21px 0px 0
+      margin: 38px 21px 0 0
       width: 300px
       display: flex
       flex-direction: column
       max-height: 100%
-      padding-bottom: 15px
+      padding-bottom: 30px
       &-small
         margin-top: 23px
         margin-left: 31px
@@ -42,6 +45,8 @@
     &-left
       background-image: url(../img/packages-img-1.jpg)
       width: 366px
+      border-radius: 8px 0 0 8px
+      background-position: center
       object-fit: cover
       background-repeat: no-repeat
       position: relative
@@ -130,7 +135,7 @@
       line-height: 160.6%
       letter-spacing: 0.01px
       margin-bottom: 44px
-      overflow: auto
+      overflow: scroll
       max-height: 154px
       &-small
         display: none

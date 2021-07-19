@@ -20,6 +20,8 @@
       grid-template-columns: repeat(3, 300px)
     &-item
       &-left
+        max-width: 280px
+
         &__image
           width: 250px
           &-small
@@ -175,6 +177,7 @@
           margin-bottom: 13px
       &-left
         height: auto
+        max-width: 50%
         &__image
           width: 350px
           border-radius: 8px 0px 0px 8px
@@ -394,6 +397,7 @@
         padding-bottom: 15px
       &-left
         max-height: 250px
+        max-width: 100%
         &-small
           max-height: 150px
         &__image
@@ -455,6 +459,8 @@
           position: static
     &-room
       margin-bottom: 17px
+  .hidden
+    display: block
 @media ( max-width: 576px )
   .logo
     width: 99px

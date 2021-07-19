@@ -884,11 +884,15 @@ template {
   height: 100%;
 }
 
-.other-packages {
+.hidden {
+  display: none;
+}
+
+.hidden .other-packages {
   padding: 12px 0 68px 0;
 }
 
-.other-packages__main-title {
+.hidden__main-title {
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -919,6 +923,7 @@ template {
   color: #fff;
   z-index: 1;
   background-color: #0A223D;
+  border-radius: 8px 8px 8px 8px;
 }
 
 .grid-item-small {
@@ -933,7 +938,7 @@ template {
 }
 
 .grid-item-right {
-  margin: 38px 21px 0px 0;
+  margin: 38px 21px 0 0;
   width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -943,7 +948,7 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   max-height: 100%;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 
 .grid-item-right-small {
@@ -960,6 +965,8 @@ template {
 .grid-item-left {
   background-image: url(../img/packages-img-1.jpg);
   width: 366px;
+  border-radius: 8px 0 0 8px;
+  background-position: center;
   -o-object-fit: cover;
      object-fit: cover;
   background-repeat: no-repeat;
@@ -1082,7 +1089,7 @@ template {
   line-height: 160.6%;
   letter-spacing: 0.01px;
   margin-bottom: 44px;
-  overflow: auto;
+  overflow: scroll;
   max-height: 154px;
 }
 
@@ -1504,6 +1511,9 @@ template {
     -ms-grid-columns: (300px)[3];
         grid-template-columns: repeat(3, 300px);
   }
+  .grid-item-left {
+    max-width: 280px;
+  }
   .grid-item-left__image {
     width: 250px;
   }
@@ -1705,6 +1715,7 @@ template {
   }
   .grid-item-left {
     height: auto;
+    max-width: 50%;
   }
   .grid-item-left__image {
     width: 350px;
@@ -2013,6 +2024,7 @@ template {
   }
   .grid-item-left {
     max-height: 250px;
+    max-width: 100%;
   }
   .grid-item-left-small {
     max-height: 150px;
@@ -2097,6 +2109,9 @@ template {
   }
   .grid-room {
     margin-bottom: 17px;
+  }
+  .hidden {
+    display: block;
   }
 }
 
