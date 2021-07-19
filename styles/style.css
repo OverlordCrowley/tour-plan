@@ -958,7 +958,10 @@ template {
 }
 
 .grid-item-left {
-  max-height: 500px;
+  background-image: url(../img/packages-img-1.jpg);
+  width: 366px;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
 }
 
@@ -1700,7 +1703,7 @@ template {
     margin-bottom: 13px;
   }
   .grid-item-left {
-    max-height: 460px;
+    height: auto;
   }
   .grid-item-left__image {
     width: 350px;
