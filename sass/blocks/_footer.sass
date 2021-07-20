@@ -2,7 +2,7 @@
   background-color: $dark
   color: $light
   padding-top: 108px
-  padding-bottom: 46px
+  padding-bottom: 31px
   &-wrapper
     display: grid
     grid-template-columns: repeat(4, minmax(250px, 1fr))
@@ -45,7 +45,6 @@
   &__span
     & > a
       color: $footer-text-color
-
   &__ul
     padding: 0
     margin: 0
@@ -57,6 +56,7 @@
     text-transform: uppercase
     margin: 0 0 16px 0
     margin-bottom: 20px
+    white-space: nowrap
     &--inline
       margin: 0 43px 0 0
   &__item
@@ -83,7 +83,6 @@
     &-wrapper
       flex-direction: column
       justify-content: flex-start
-
   &__link
     color: $footer-text-color
   &__icon
@@ -120,6 +119,7 @@
     height: 50px
     margin-bottom: 14px
     flex-basis: 47%
+
   &__message
     background-color: #fff
     border-radius: 4px
@@ -143,12 +143,33 @@
     line-height: 15px
     border-radius: 4px
   &__info
-
     font-style: normal
     font-weight: bold
     font-size: 12px
     line-height: 15px
     color: $footer-text-color-v2
+  &-bottom
+    margin-top: 96px
+    position: relative
+    &__list
+      display: flex
+      text-align: center
+      align-items: center
+      justify-content: center
+      margin-right: 54px
+    &__item
+      margin-left: 12px
+    &__link
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      color: $light
+    &__payments
+      position: absolute
+      right: 0
+      top: 0
+
 .logo-vertical
   width: 100%
   height: 100%

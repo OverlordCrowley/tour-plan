@@ -39,6 +39,12 @@
       &-bottom
         &__button
           &-small
+  .footer
+    &__input
+      flex-basis: 100%
+    &-wrapper
+      grid-template-columns: repeat(4, 1fr)
+
 @media ( max-width: 992px )
   .container, .newsletter-wrapper
     max-width: 700px
@@ -122,6 +128,7 @@
         max-height: 299px
   .activities
     padding-top: 50px
+    padding-bottom: 50px
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -199,7 +206,59 @@
           padding: 0 21px 20px 32px
     &-room
       margin-bottom: 17px
-
+  .footer
+    padding-top: 71px
+    padding-bottom: 16px
+    &-wrapper
+      grid-template-columns: repeat(6, 1fr )
+      grid-row-gap: 46px
+    &__input
+      flex-basis: 47%
+    &__item
+      white-space: nowrap
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 1
+      width: 97px
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+        margin-top: 11px
+        margin-left: 5px
+        justify-content: flex-start
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 1
+    &__legal
+      grid-column: span 3
+      margin-left: 97px
+    &__additional
+      grid-column: span 2
+      margin-left: 18px
+    &__contact
+      &-details
+        grid-column: span 5
+        grid-row: 3
+        padding-top: 10px
+        margin-left: 0
+      &-form
+        grid-row: 4
+        grid-column: span 5
+        margin-top: -3px
+        padding-right: 51px
+    &-bottom
+      margin-top: 60px
+      &__list
+        justify-content: flex-start
+        padding-left: 0
+      &__item
+        margin-left: 12px
+        &:first-child
+          margin-left: 2px
+      &__payments
+        top: -5px
 @media ( max-width: 767px )
   .container,
     max-width: 576px
@@ -350,6 +409,7 @@
         margin-top: 0
   .activities
     padding-top: 20px
+    padding-bottom: 32px
     &__title
       font-style: normal
       font-weight: bold
@@ -466,6 +526,103 @@
       margin-bottom: 17px
   .hidden
     display: block
+  .footer
+    padding-top: 69px
+    padding-bottom: 38px
+    &__text
+      line-height: 19px
+      margin-bottom: 23px
+    &__span
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 160%
+      text-align: justify
+    &__input
+      flex-basis: 100%
+      margin-bottom: 15px
+      padding-left: 21px
+    &__item
+      word-wrap: normal
+      white-space: normal
+      &--mb-2
+        margin-bottom: 22px
+        &:last-child
+          margin-left: 0
+    &-wrapper
+      grid-template-columns: 1fr
+      grid-gap: 30px
+    &__logo
+      grid-row: 1
+      grid-column: 1
+      width: 93px
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+        margin: 0
+        flex-direction: column
+        align-items: flex-start
+        & > .footer__title
+          margin-top: 10px
+          margin-bottom: 21px
+    &__additional
+      grid-row: 4
+      grid-column: 1
+      order: 2
+      margin-left: 0
+      margin-top: -3px
+    &__categories
+      grid-row: 5
+      grid-column: 1
+      margin-top: -3px
+    &__legal
+      grid-row: 3
+      grid-column: 1
+      order: 1
+      margin-left: 0
+    &__icon
+      margin-right: 11px
+      &:last-child
+        margin-top: 5px
+      &-phone
+        margin-bottom: 73px
+        margin-left: -6px
+      &-wrapper
+        min-width: 23px
+      &-map
+        margin-left: -3px
+        margin-top: 5px
+    &__contact
+      &-details
+        grid-row: 6
+        grid-column: 1
+        & > .footer__title
+          margin-top: 0
+      &-form
+        margin-top: 5px
+        grid-row: 7
+        grid-column: 1
+        & > .footer__title
+          margin-bottom: 15px
+    &__message
+      padding-left: 21px
+      margin-bottom: 16px
+    &__info
+      margin-bottom: 14px
+    &__button
+      order: 2
+      min-width: 158px
+    &-bottom
+      margin-top: 25px
+      &__link
+        white-space: nowrap
+        &:first-child
+          margin-left: -2px
+      &__payments
+        left: 0
+        top: 29px
+
 @media ( max-width: 576px )
   .logo
     width: 99px
@@ -483,3 +640,6 @@
   .newsletter
     &-wrapper
       min-width: 280px
+  .footer
+    &__logo
+      width: 93px
