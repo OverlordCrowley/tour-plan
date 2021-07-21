@@ -21,11 +21,16 @@ img {
   max-width: 100%;
 }
 
-button:hover, button:focus {
-  -webkit-box-shadow: inset -10.5em 0 0 0 #ff7f82, inset 10.6em 0 0 0 #ff7f82;
-          box-shadow: inset -10.5em 0 0 0 #ff7f82, inset 10.6em 0 0 0 #ff7f82;
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+.button-anim:hover {
+  background-color: #4cd79b;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.button-anim:active {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #5cd74c;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1887,6 +1892,12 @@ template {
 }
 
 @media (max-width: 992px) {
+  .button-anim:hover {
+    background-color: #EC1F46;
+  }
+  .button-anim:active {
+    background-color: #EC1F46;
+  }
   .container, .newsletter-wrapper {
     max-width: 700px;
   }

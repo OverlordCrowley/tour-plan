@@ -16,6 +16,11 @@ body
 img
   max-width: 100%
 
-button:hover, button:focus
-  box-shadow: inset -10.5em 0 0 0 #ff7f82, inset 10.6em 0 0 0 #ff7f82
-  transition: 0.7s
+.button
+  &-anim
+    &:hover
+      background-color: rgba(76, 215, 155, 1)
+      transition: 0.5s
+    &:active
+      transition: 0.5s
+      background-color: rgba(92, 215, 76, 1)
