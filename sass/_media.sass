@@ -266,16 +266,42 @@
   body
     padding-top: 70px
   .navbar
+    &__user
+      flex-direction: column
+      justify-content: center
+      &_mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+    &__search
+      &_mobile
+        &_hidden
+          display: none
+        &_visible
+          display: flex
+          margin-right: 0
     &--mobile
       position: fixed
       left: 0
       top: 0
       right: 0
       z-index: 99
-    &__search, &-list, &__user
-      display: none
+    &-list
+      flex-direction: column
+      padding-top: 31px
+      &__item
+        margin-bottom: 20px
+        &_mobile
+          &_visible
+            display: block
     &-menu
       display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 70px
       &--visible
         display: block
     &-top
@@ -301,6 +327,12 @@
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &_light
+        color: $light
+        margin-left: 0
+        margin-top: 10px
   .breadcrumb
     &-list
       padding: 19px 0 10px 0
