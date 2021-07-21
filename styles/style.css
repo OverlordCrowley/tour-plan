@@ -1713,6 +1713,22 @@ template {
       flex-basis: 47%;
 }
 
+.footer__input::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__input:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__input::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__input::placeholder {
+  color: #BDBDBD;
+}
+
 .footer__message {
   background-color: #fff;
   border-radius: 4px;
@@ -1727,6 +1743,22 @@ template {
   margin-bottom: 24px;
   height: 123px;
   resize: none;
+}
+
+.footer__message::-webkit-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__message:-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__message::-ms-input-placeholder {
+  color: #BDBDBD;
+}
+
+.footer__message::placeholder {
+  color: #BDBDBD;
 }
 
 .footer__button {
@@ -2148,8 +2180,24 @@ template {
     max-width: 576px;
     width: 87%;
   }
+  body {
+    padding-top: 70px;
+  }
+  .navbar--mobile {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 99;
+  }
   .navbar__search, .navbar-list, .navbar__user {
     display: none;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-menu--visible {
+    display: block;
   }
   .navbar-top {
     padding-top: 24px;

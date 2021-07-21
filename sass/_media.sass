@@ -263,9 +263,21 @@
   .container,
     max-width: 576px
     width: 87%
+  body
+    padding-top: 70px
   .navbar
+    &--mobile
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      z-index: 99
     &__search, &-list, &__user
       display: none
+    &-menu
+      display: none
+      &--visible
+        display: block
     &-top
       padding-top: 24px
       padding-bottom: 18px
