@@ -280,7 +280,10 @@
           display: none
         &_visible
           display: flex
-          margin-right: 0
+          margin: auto
+          max-width: 72%
+          &::placeholder
+            color: $text-color
     &--mobile
       position: fixed
       left: 0
@@ -291,10 +294,15 @@
       flex-direction: column
       padding-top: 31px
       &__item
-        margin-bottom: 20px
+        margin-bottom: 28px
+        &:nth-child(2)
+          margin-bottom: 36px
+        &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8)
+          margin-bottom: 17px
         &_mobile
           &_visible
             display: block
+
     &-menu
       display: none
       position: fixed

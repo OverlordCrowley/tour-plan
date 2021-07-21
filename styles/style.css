@@ -2211,7 +2211,20 @@ template {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 0;
+    margin: auto;
+    max-width: 72%;
+  }
+  .navbar__search_mobile_visible::-webkit-input-placeholder {
+    color: #333333;
+  }
+  .navbar__search_mobile_visible:-ms-input-placeholder {
+    color: #333333;
+  }
+  .navbar__search_mobile_visible::-ms-input-placeholder {
+    color: #333333;
+  }
+  .navbar__search_mobile_visible::placeholder {
+    color: #333333;
   }
   .navbar--mobile {
     position: fixed;
@@ -2228,7 +2241,13 @@ template {
     padding-top: 31px;
   }
   .navbar-list__item {
-    margin-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  .navbar-list__item:nth-child(2) {
+    margin-bottom: 36px;
+  }
+  .navbar-list__item:nth-child(3), .navbar-list__item:nth-child(4), .navbar-list__item:nth-child(5), .navbar-list__item:nth-child(6), .navbar-list__item:nth-child(7), .navbar-list__item:nth-child(8) {
+    margin-bottom: 17px;
   }
   .navbar-list__item_mobile_visible {
     display: block;
