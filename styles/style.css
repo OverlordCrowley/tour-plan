@@ -2635,6 +2635,7 @@ template {
   }
   .footer__contact-form {
     margin-top: 5px;
+    padding: 0;
     -ms-grid-row: 7;
     grid-row: 7;
     -ms-grid-column: 1;
@@ -2649,6 +2650,8 @@ template {
   }
   .footer__info {
     margin-bottom: 14px;
+    display: block;
+    width: 100%;
   }
   .footer__button {
     -webkit-box-ordinal-group: 3;
@@ -2663,7 +2666,7 @@ template {
     white-space: nowrap;
   }
   .footer-bottom__link:first-child {
-    margin-left: -2px;
+    margin-left: -3px;
   }
   .footer-bottom__payments {
     left: 0;
