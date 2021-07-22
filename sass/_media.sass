@@ -281,13 +281,14 @@
         &_visible
           display: flex
     &__search
+      margin: 0
       &_mobile
         &_hidden
           display: none
         &_visible
           display: flex
           margin: auto
-          max-width: 72%
+          max-width: 88%
           &::placeholder
             color: $text-color
     &--mobile
@@ -308,6 +309,7 @@
         &_mobile
           &_visible
             display: block
+            max-width: 100%
 
     &-menu
       display: none
@@ -318,6 +320,7 @@
       top: 70px
       &--visible
         display: block
+        overflow: auto
     &-top
       padding-top: 24px
       padding-bottom: 18px
@@ -493,7 +496,6 @@
       order: 2
     &:nth-child(3)
       order: 1
-
   .other-packages
     padding: 7px 0 40px 0
     &__main-title
@@ -683,7 +685,9 @@
       &__payments
         left: 0
         top: 29px
-
+  .search
+    &__input
+      min-width: 243px
 @media ( max-width: 576px )
   .logo
     width: 99px

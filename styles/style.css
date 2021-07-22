@@ -2215,6 +2215,9 @@ template {
     display: -ms-flexbox;
     display: flex;
   }
+  .navbar__search {
+    margin: 0;
+  }
   .navbar__search_mobile_hidden {
     display: none;
   }
@@ -2223,7 +2226,7 @@ template {
     display: -ms-flexbox;
     display: flex;
     margin: auto;
-    max-width: 72%;
+    max-width: 88%;
   }
   .navbar__search_mobile_visible::-webkit-input-placeholder {
     color: #333333;
@@ -2262,6 +2265,7 @@ template {
   }
   .navbar-list__item_mobile_visible {
     display: block;
+    max-width: 100%;
   }
   .navbar-menu {
     display: none;
@@ -2273,6 +2277,7 @@ template {
   }
   .navbar-menu--visible {
     display: block;
+    overflow: auto;
   }
   .navbar-top {
     padding-top: 24px;
@@ -2799,6 +2804,9 @@ template {
   .footer-bottom__payments {
     left: 0;
     top: 29px;
+  }
+  .search__input {
+    min-width: 243px;
   }
 }
 

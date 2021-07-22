@@ -1,2 +1,6 @@
 
 .vscode/settings.json
+send.php
+phpmailer/SMTP.php
+phpmailer/PHPMailer.php
+phpmailer/Exception.php
