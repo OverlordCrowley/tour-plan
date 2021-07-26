@@ -382,11 +382,7 @@
 							<div class="grid-item-bottom">
 								<span class="grid-item-bottom__old-price">$ 10,500</span>
 								<strong class="grid-item-bottom__current-price">$ 8,500</strong>
-								<button
-									class="button grid-item-bottom__button button-anim"
-									data-href="#rating-modal"
-									data-toggle="modal"
-								>
+								<button class="button grid-item-bottom__button button-anim">
 									Book Now
 								</button>
 							</div>
@@ -481,8 +477,6 @@
 										grid-item-bottom__button-small
 										button-anim
 									"
-									data-href="#rating-modal"
-									data-toggle="modal"
 								>
 									Book Now
 								</button>
@@ -578,8 +572,6 @@
 										grid-item-bottom__button-small
 										button-anim
 									"
-									data-href="#rating-modal"
-									data-toggle="modal"
 								>
 									Book Now
 								</button>
@@ -675,8 +667,6 @@
 										grid-item-bottom__button-small
 										button-anim
 									"
-									data-href="#rating-modal"
-									data-toggle="modal"
 								>
 									Book Now
 								</button>
@@ -772,8 +762,6 @@
 										grid-item-bottom__button-small
 										button-anim
 									"
-									data-href="#rating-modal"
-									data-toggle="modal"
 								>
 									Book Now
 								</button>
@@ -797,11 +785,10 @@
 					class="subscribe newsletter__subscribe"
 				>
 					<input
-						type="email"
+						type="text"
 						class="subscribe__input"
 						placeholder="Your email address"
 						name="email"
-						required
 					/>
 					<button class="subscribe__button button-anim">Send</button>
 				</form>
@@ -976,13 +963,7 @@
 							class="card__image"
 						/>
 						<h3 class="card__title">The curious corner of&nbsp;chamarel</h3>
-						<button
-							class="card__button button-anim"
-							data-href="#rating-modal"
-							data-toggle="modal"
-						>
-							Book Now
-						</button>
+						<button class="card__button button-anim">Book Now</button>
 					</div>
 					<!-- ./card -->
 					<div class="card activities__card">
@@ -992,13 +973,7 @@
 							class="card__image"
 						/>
 						<h3 class="card__title">Gymkhana club golf course</h3>
-						<button
-							class="card__button button-anim"
-							data-href="#rating-modal"
-							data-toggle="modal"
-						>
-							Book Now
-						</button>
+						<button class="card__button button-anim">Book Now</button>
 					</div>
 					<div class="card activities__card">
 						<img
@@ -1009,13 +984,7 @@
 						<h3 class="card__title">
 							Tamarind falls hiking trip&nbsp;-&nbsp;full day
 						</h3>
-						<button
-							class="card__button button-anim"
-							data-href="#rating-modal"
-							data-toggle="modal"
-						>
-							Book Now
-						</button>
+						<button class="card__button button-anim">Book Now</button>
 					</div>
 					<div class="card activities__card">
 						<img
@@ -1024,13 +993,7 @@
 							class="card__image"
 						/>
 						<h3 class="card__title">The blue marine discovery quest</h3>
-						<button
-							class="card__button button-anim"
-							data-href="#rating-modal"
-							data-toggle="modal"
-						>
-							Book Now
-						</button>
+						<button class="card__button button-anim">Book Now</button>
 					</div>
 				</div>
 			</div>
@@ -1213,35 +1176,24 @@
 					<!-- /.footer__contact-details -->
 					<div class="footer__contact-form">
 						<h3 class="footer__title">Send us a message</h3>
-						<form action="send.php" method="POST" class="footer__form form">
-							<div class="footer__input-group">
-								<input
-									type="text"
-									class="input footer__input"
-									placeholder="Your Full Name*"
-									name="name"
-									required
-									minlength="2"
-								/>
-							</div>
-							<!-- /.footer__input-group -->
-							<div class="footer__input-group">
-								<input
-									type="tel"
-									class="input footer__input phone"
-									placeholder="Phone Number*"
-									name="phone"
-									required
-								/>
-							</div>
-							<div class="footer__message-group">
-								<textarea
-									class="message footer__message"
-									placeholder="Message"
-									name="message"
-								></textarea>
-							</div>
-							<!-- /.footer__message-group -->
+						<form action="send.php" method="POST" class="footer__form">
+							<input
+								type="text"
+								class="input footer__input"
+								placeholder="Your Full Name*"
+								name="name"
+							/>
+							<input
+								type="tel"
+								class="input footer__input"
+								placeholder="Phone Number*"
+								name="phone"
+							/>
+							<textarea
+								class="message footer__message"
+								placeholder="Message"
+								name="message"
+							></textarea>
 							<button class="button footer__button button-anim" type="submit">
 								Send
 							</button>
@@ -1289,28 +1241,24 @@
 					<img src="./img/close.svg" alt="Icon: close" />
 				</a>
 				<h3 class="modal__title">Booking</h3>
-				<form action="send.php" method="POST" class="modal__form form">
+				<form action="send.php" method="POST" class="modal__form">
 					<input
 						type="text"
 						class="input modal__input"
 						placeholder="Your Full Name*"
 						name="name"
-						required
-						minlength="2"
 					/>
 					<input
 						type="tel"
-						class="input modal__input phone"
+						class="input modal__input"
 						placeholder="Phone Number*"
 						name="phone"
-						required
 					/>
 					<input
 						type="email"
 						class="input modal__input"
 						placeholder="Email*"
 						name="email"
-						required
 					/>
 					<textarea
 						class="modal__message message"
@@ -1333,28 +1281,24 @@
 					<img src="./img/close.svg" alt="Icon: close" />
 				</a>
 				<h3 class="modal__title">Send us a feedback</h3>
-				<form action="send.php" method="POST" class="modal__form form">
+				<form action="send.php" method="POST" class="modal__form">
 					<input
 						type="text"
 						class="input modal__input"
 						placeholder="Your Full Name*"
 						name="name"
-						required
-						minlength="2"
 					/>
 					<input
 						type="tel"
-						class="input modal__input phone"
+						class="input modal__input"
 						placeholder="Phone Number*"
 						name="phone"
-						required
 					/>
 					<input
 						type="email"
 						class="input modal__input"
 						placeholder="Email*"
 						name="email"
-						required
 					/>
 					<textarea
 						class="modal__message message"
@@ -1371,8 +1315,6 @@
 		</div>
 		<!-- /.modal -->
 		<script src="js/jquery-3.6.0.min.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/jquery.mask.min.js"></script>
 		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
