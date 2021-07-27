@@ -26,6 +26,8 @@
     z-index: 151
     visibility: hidden
     opacity: 0
+    overflow: auto
+    overflow: -moz-scrollbars-auto
     &_visible
       visibility: visible
       opacity: 1
@@ -48,15 +50,18 @@
     margin-bottom: 15px
   &__input
     width: 100%
-    margin-bottom: 15px
+    margin-top: 15px
+    -moz-box-sizing: border-box
+    &:first-child
+      margin-top: 0
     &::placeholder
       color: $footer-text-color
       font-size: 12px
-      line-height: 15px
+
   &__message
     width: 100%
     min-height: 123px
-    margin-bottom: 15px
+    margin-top: 15px
     resize: none
     &::placeholder
       color: $footer-text-color
@@ -64,6 +69,7 @@
       line-height: 15px
   &__button
     min-width: 160px
+    margin-top: 15px
     min-height: 50px
     padding: 18px
     font-style: normal
@@ -81,4 +87,5 @@
     font-weight: bold
     font-size: 12px
     line-height: 15px
+    margin-top: 15px
     color: $footer-text-color-v2

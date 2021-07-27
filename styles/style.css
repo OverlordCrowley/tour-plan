@@ -19,6 +19,7 @@ body {
 
 img {
   max-width: 100%;
+  background-repeat: no-repeat;
 }
 
 .button-anim:hover {
@@ -956,9 +957,6 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   border-radius: 8px;
   color: #fff;
   z-index: 1;
@@ -1003,6 +1001,8 @@ template {
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
+  margin-right: 0;
+  max-width: 100%;
 }
 
 .grid-item-left {
@@ -1240,11 +1240,9 @@ template {
   width: 351px;
   height: 55px;
   border-radius: 4px;
-  overflow: hidden;
 }
 
 .subscribe__input {
-  position: absolute;
   width: 100%;
   height: 100%;
   padding-left: 37px;
@@ -1255,23 +1253,23 @@ template {
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
-  margin-right: 95%;
+  border-radius: 4px;
 }
 
 .subscribe__input::-webkit-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .subscribe__input:-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .subscribe__input::-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .subscribe__input::placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .subscribe__button {
@@ -1287,6 +1285,7 @@ template {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .reviews {
@@ -1319,7 +1318,6 @@ template {
   border-radius: 8px;
   padding: 0 62px 30px;
   position: relative;
-  max-height: 280px;
 }
 
 .reviews-slider__item::before {
@@ -1436,7 +1434,7 @@ template {
 
 .reviews-slider__text {
   overflow: auto;
-  max-height: 280px;
+  max-height: 115px;
 }
 
 .activities {
@@ -1621,7 +1619,7 @@ template {
 }
 
 .footer__span > a {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .footer__ul {
@@ -1660,11 +1658,11 @@ template {
 .footer__item--mb-2 {
   margin-bottom: 14px;
   margin-left: 5px;
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .footer__item > a {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .footer__item-tel {
@@ -1675,7 +1673,7 @@ template {
 }
 
 .footer__text {
-  color: #BDBDBD;
+  color: #bdbdbd;
   letter-spacing: 0.45px;
   font-size: 13px;
   margin-bottom: 28px;
@@ -1692,7 +1690,7 @@ template {
 }
 
 .footer__link {
-  color: #BDBDBD;
+  color: #bdbdbd;
 }
 
 .footer__icon {
@@ -1741,6 +1739,23 @@ template {
 
 .footer__input {
   width: 100%;
+  margin-bottom: 5px;
+}
+
+.footer__input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.footer__input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.footer__input::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.footer__input::placeholder {
+  color: #bdbdbd;
 }
 
 .footer__input-group {
@@ -1754,26 +1769,26 @@ template {
       align-self: flex-start;
 }
 
-.footer__input-group::-webkit-input-placeholder {
-  color: #BDBDBD;
-}
-
-.footer__input-group:-ms-input-placeholder {
-  color: #BDBDBD;
-}
-
-.footer__input-group::-ms-input-placeholder {
-  color: #BDBDBD;
-}
-
-.footer__input-group::placeholder {
-  color: #BDBDBD;
-}
-
 .footer__message {
   width: 100%;
   height: 123px;
   resize: none;
+}
+
+.footer__message::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.footer__message:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.footer__message::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.footer__message::placeholder {
+  color: #bdbdbd;
 }
 
 .footer__message-group {
@@ -1783,25 +1798,9 @@ template {
   font-weight: normal;
   font-size: 12px;
   line-height: 15px;
-  margin-top: 15px;
+  margin-top: 8px;
   height: 100%;
-  margin-bottom: 24px;
-}
-
-.footer__message-group::-webkit-input-placeholder {
-  color: #BDBDBD;
-}
-
-.footer__message-group:-ms-input-placeholder {
-  color: #BDBDBD;
-}
-
-.footer__message-group::-ms-input-placeholder {
-  color: #BDBDBD;
-}
-
-.footer__message-group::placeholder {
-  color: #BDBDBD;
+  margin-bottom: 20px;
 }
 
 .footer__button {
@@ -1899,6 +1898,7 @@ template {
   visibility: hidden;
   opacity: 0;
   overflow: auto;
+  overflow: -moz-scrollbars-auto;
 }
 
 .modal__dialog_visible {
@@ -1931,6 +1931,7 @@ template {
 .modal__input {
   width: 100%;
   margin-top: 15px;
+  -moz-box-sizing: border-box;
 }
 
 .modal__input:first-child {
@@ -1938,27 +1939,23 @@ template {
 }
 
 .modal__input::-webkit-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
-  line-height: 15px;
 }
 
 .modal__input:-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
-  line-height: 15px;
 }
 
 .modal__input::-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
-  line-height: 15px;
 }
 
 .modal__input::placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
-  line-height: 15px;
 }
 
 .modal__message {
@@ -1969,25 +1966,25 @@ template {
 }
 
 .modal__message::-webkit-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
   line-height: 15px;
 }
 
 .modal__message:-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
   line-height: 15px;
 }
 
 .modal__message::-ms-input-placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
   line-height: 15px;
 }
 
 .modal__message::placeholder {
-  color: #BDBDBD;
+  color: #bdbdbd;
   font-size: 12px;
   line-height: 15px;
 }
@@ -2711,6 +2708,7 @@ template {
   .reviews-slider__text {
     overflow: auto;
     max-height: 438px;
+    text-align: left;
   }
   .card {
     margin-bottom: 28px;

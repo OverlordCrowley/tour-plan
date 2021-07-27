@@ -108,25 +108,34 @@
     justify-content: space-between
     flex-wrap: wrap
   &__input
-    font-style: normal
-    font-weight: normal
-    font-size: 12px
-    line-height: 15px
-    margin-bottom: 14px
-    flex-basis: 47%
+    width: 100%
+    margin-bottom: 5px
     &::placeholder
       color: $footer-text-color
+    &-group
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      flex-basis: 47%
+      align-self: flex-start
+
   &__message
-    flex-basis: 100%
-    font-style: normal
-    font-weight: normal
-    font-size: 12px
-    line-height: 15px
-    margin-bottom: 24px
+    width: 100%
     height: 123px
     resize: none
     &::placeholder
       color: $footer-text-color
+    &-group
+      flex-basis: 100%
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+      margin-top: 8px
+      height: 100%
+      margin-bottom: 20px
+
   &__button
     min-width: 160px
     min-height: 50px
