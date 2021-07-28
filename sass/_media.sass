@@ -23,9 +23,9 @@
         padding-right: 25px
       &-left
         max-width: 280px
+
         &__image
-          max-width: 100%
-          background-repeat: no-repeat
+          width: 250px
           &-small
             width: 100%
       &-right
@@ -41,12 +41,7 @@
           &-small
   .footer
     &__input
-      &-group
-        flex-basis: 100%
-        margin-bottom: 14px
-    &__message
-      &-group
-        margin-top: 0
+      flex-basis: 100%
     &-wrapper
       grid-template-columns: repeat(4, 1fr)
 
@@ -149,6 +144,7 @@
     height: 255px
     &__title
       max-width: 71%
+
   .reviews-slider__text
     overflow: auto
     max-height: 299px
@@ -178,7 +174,7 @@
   .grid
     &-items
       grid-gap: 15px
-      grid-template-columns: 1fr 1fr
+      grid-template-columns: repeat(2, 1fr)
     &-item
       &__text
         font-style: normal
@@ -223,8 +219,7 @@
       grid-template-columns: repeat(6, 1fr )
       grid-row-gap: 46px
     &__input
-      &-group
-        flex-basis: 47%
+      flex-basis: 47%
     &__item
       white-space: nowrap
     &__logo
@@ -273,8 +268,6 @@
   .modal
     &__dialog
       padding: 33px 60px
-      max-height: 100vh
-      max-width: 90vw
 @media ( max-width: 767px )
   .container,
     max-width: 576px
@@ -493,7 +486,6 @@
   .reviews-slider__text
     overflow: auto
     max-height: 438px
-    text-align: left
   .card
     margin-bottom: 28px
     &:first-child
@@ -533,14 +525,12 @@
       &-left
         max-height: 250px
         min-width: 100%
-        border-radius: 8px 8px 0 0
         &-small
           max-height: 150px
         &__image
-          max-height: 250px
+          height: 100%
           width: 100%
           border-radius: 8px 8px 0 0
-
           &-small
             width: 100%
             height: 100%
@@ -549,7 +539,7 @@
         padding: 0
         flex-direction: column
       &__rating
-        max-height: 15px
+        max-height: 18px
         display: flex
         justify-content: flex-start
         &>img
@@ -557,7 +547,6 @@
           max-height: 28px
         &-small
           display: none
-
       &-right
         width: 100%
         max-height: 100%
@@ -580,8 +569,8 @@
         line-height: 160.6%
         letter-spacing: 0.01px
         margin-bottom: 25px
-        min-height: 95px
-        max-height: 95px
+        max-height: 150px
+
         overflow: auto
       &-bottom
         &__old-price
@@ -613,12 +602,9 @@
       line-height: 160%
       text-align: justify
     &__input
-      width: 100%
+      flex-basis: 100%
+      margin-bottom: 15px
       padding-left: 21px
-      &-group
-        flex-basis: 100%
-        margin-bottom: 15px
-
     &__item
       word-wrap: normal
       white-space: normal
@@ -685,8 +671,7 @@
           margin-bottom: 15px
     &__message
       padding-left: 21px
-      &-group
-        margin-bottom: 16px
+      margin-bottom: 16px
     &__info
       margin-bottom: 14px
       display: block
@@ -736,9 +721,4 @@
   .modal
     &__dialog
       padding: 33px 30px
-      width: 90%
-  .grid
-    &-item
-      &__text
-        max-height: 200px
-        overflow: auto
+      width: 80%

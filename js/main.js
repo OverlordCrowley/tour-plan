@@ -42,7 +42,7 @@ let modalButton = $('[data-toggle=modal]');
 let closeModalButton = $('.modal__close');
 modalButton.on('click', openModal);
 closeModalButton.on('click', closeModal);
-$(".phone").mask("+7 (999) 999-99-99");
+
 
 function openModal() {
         let targetModal = $(this).attr("data-href");
@@ -70,28 +70,4 @@ $(document).keyup(function(esc) {
   };
 });
 
-// Обработка форм
-  $('.form').each(function(){
-    $(this).validate({
-    errorClass: "invalid",
-    messages: {
-    name: {
-      requared: "Please specify your name",
-      minlength: "Name must not be shorter than 2 letters",
-    },
-    email: {
-      required: "We need your email address to contact you",
-      email: "Your email address must be in the format of name@domain.com"
-    },
-    phone: {
-      required: "Phone is required",
-      phone: "please enter your full phone number",
-      minlength: "Enter full phone number",
-    }
-  }
-  });
-  });
-
-AOS.init();
-  
 });
